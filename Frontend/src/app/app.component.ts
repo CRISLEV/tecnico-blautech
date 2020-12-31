@@ -9,7 +9,7 @@ import { UserService } from './users.service';
 
 export class AppComponent implements OnInit{
   title = 'practica1sa';
-  displayedColumns: string[] = ['position', 'name'];
+  displayedColumns: string[] = ['position', 'username', 'name', 'email', 'age', 'employeeid'];
   dataSource = ELEMENT_DATA;
   Users: any[] = [];
   UserName:any ;

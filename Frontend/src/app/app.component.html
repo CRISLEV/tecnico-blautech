@@ -392,9 +392,29 @@
               </ng-container>
 
               <!-- Name Column -->
+              <ng-container matColumnDef="username">
+                <mat-header-cell *matHeaderCellDef> Usuario </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.username}} </mat-cell>
+              </ng-container>
+
               <ng-container matColumnDef="name">
                 <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="email">
+                <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="age">
+                <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.age}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="employeeid">
+                <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.employeeid}} </mat-cell>
               </ng-container>
 
               <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
