@@ -17,4 +17,11 @@ export class UserService {
     return this.http.post(newUserstr, newUser, {});
   }
 
+  delUser(userName){
+    let httpParams = new HttpParams()
+    .append("username", userName);
+    var newContactstr = 'http://127.0.0.1:4100/deleteUser?username='+userName
+    return this.http.delete(newContactstr);
+  }
+
 }

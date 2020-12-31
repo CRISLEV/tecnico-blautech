@@ -9,7 +9,7 @@ import { UserService } from './users.service';
 
 export class AppComponent implements OnInit{
   title = 'practica1sa';
-  displayedColumns: string[] = ['position', 'username', 'name', 'email', 'age', 'employeeid'];
+  displayedColumns: string[] = ['position', 'username', 'name', 'email', 'age', 'employeeid', 'eliminar'];
   dataSource = ELEMENT_DATA;
   Users: any[] = [];
   UserName:any ;
@@ -74,8 +74,22 @@ export class AppComponent implements OnInit{
     );
   }
 
-}
+  deleteBtn(row){
+    console.log(row);
+    var response = this.Userservice.delUser(row.username)
+    .subscribe(
+      data => {// Success
+        console.log(data);
+        alert('Contacto eliminado!');
+        this.lstUsers();
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
 
+}
 export interface UserElement {
   position: number;
   username:string;

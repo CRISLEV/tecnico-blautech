@@ -31,7 +31,7 @@ def insertUser():
     employeeid = req_data['employeeid']
     result = insertDB(username, name, email, age, password, employeeid)
     if (result):
-        return "Usuario ["+username+"] insertado con éxito.\n"
+        return "{\"message\":\"Usuario ["+username+"] insertado con éxito.\"}"
     else:
         return "Error al crear usuario.\n"
 
@@ -46,7 +46,7 @@ def modifyUser():
     employeeid = req_data['employeeid']
     result = modifyDB(username, name, email, age, password, employeeid)
     if (result):
-        return "Usuario ["+username+"] modificado con éxito.\n"
+        return "{\"message\":\"Usuario ["+username+"] modificado con éxito.\"}"
     else:
         return "Error al modificar usuario.\n"
 
@@ -55,7 +55,7 @@ def deleteUser():
     username = request.args.get('username')
     result = deleteDB(username)
     if (result):
-        return "Usuario ["+username+"] eliminado con éxito.\n"
+        return "{\"message\":\"Usuario ["+username+"] eliminado con éxito.\"}"
     else:
         return "Error al eliminar usuario.\n"
 

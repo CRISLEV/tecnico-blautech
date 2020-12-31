@@ -268,7 +268,7 @@
 
 
   /* Responsive Styles */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 600px) {
 
     .card-container > *:not(.circle-link) ,
     .terminal {
@@ -286,7 +286,7 @@
 
     .example-form {
       min-width: 150px;
-      max-width: 500px;
+      max-width: 800px;
       width: 100%;
     }
 
@@ -295,7 +295,7 @@
     }
 
     .example-card {
-      max-width: 400px;
+      max-width: 1800px;
     }
 
     svg#rocket-smoke {
@@ -304,7 +304,7 @@
     }
   }
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 1575px) {
     svg#rocket-smoke {
       display: none;
       visibility: hidden;
@@ -415,6 +415,13 @@
               <ng-container matColumnDef="employeeid">
                 <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.employeeid}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="eliminar">
+                <mat-header-cell *matHeaderCellDef> Eliminar </mat-header-cell>
+                <mat-cell *matCellDef="let element" >
+                  <button mat-raised-button (click)="deleteBtn(element)">Eliminar</button>
+                </mat-cell>
               </ng-container>
 
               <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
